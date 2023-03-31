@@ -1,7 +1,19 @@
 ---
+import { Picture } from '@astrojs/image/components';
+
 import Layout from '../layouts/layout.astro';
 ---
 
 <Layout title='Home'>
   <p>This is the home page</p>
+  <div class='grid sm:grid-cols-2'>
+    <Picture
+      src={import('../images/crl-texture-6.jpg')}
+      widths={[300, 600]}
+      sizes='300, (max-width: 600px)'
+      alt='CRL Texture.'
+      background='#ffffff'
+    />
+    <div></div>
+  </div>
 </Layout>
