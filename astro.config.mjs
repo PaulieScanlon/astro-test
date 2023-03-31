@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import image from '@astrojs/image';
 
 export default defineConfig({
-  site: 'https://www.cockroachlabs.com/tests/test-astro/',
+  site: 'https://www.cockroachlabs.com/tests/test-astro',
   base: '/tests/test-astro',
   integrations: [
     image({
