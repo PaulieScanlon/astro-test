@@ -1,0 +1,27 @@
+{
+  "name": "astro-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulieScanlon/astro-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulieScanlon/astro-test/issues"
+  },
+  "homepage": "https://github.com/PaulieScanlon/astro-test#readme",
+  "dependencies": {
+    "astro": "^2.1.8"
+  }
+}
