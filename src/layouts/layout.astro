@@ -20,10 +20,10 @@ const { title } = Astro.props;
       <nav class='w-full'>
         <div class='relative flex bg-white p-4 shadow'>
           <div class='flex mx-auto w-full max-w-7xl items-center justify-between'>
-            <a href='https://www.cockroachlabs.com/' target='_blank' rel='noreferrer'>
+            <a href='https://www.cockroachlabs.com/' target='_blank' rel='noopener'>
               <CockroachLabsLogo />
             </a>
-            <a href='https://github.com/PaulieScanlon/astro-test' target='_blank' rel='noreferrer'>
+            <a href='https://github.com/PaulieScanlon/astro-test' target='_blank' rel='noopener'>
               <GitHubLogo />
             </a>
           </div>
@@ -40,11 +40,23 @@ const { title } = Astro.props;
         </div>
       </nav>
     </header>
-    <main class='prose px-4 py-36 text-brand-white w-full max-w-none min-h-screen'>
+    <main class='prose px-4 py-36 text-brand-white w-full max-w-none min-h-[calc(100vh-48px)]'>
       <div class='mx-auto w-full max-w-7xl'>
         <h1>{title}</h1>
         <slot />
       </div>
     </main>
+    <footer class='w-full bg-brand-white text-xs p-4'>
+      <div class='flex mx-auto w-full max-w-7xl items-center justify-between'>
+        <a
+          class='transition-colors duration-300 hover:text-brand-primary'
+          href='https://www.cockroachlabs.com/product/'
+          target='_blank'
+          rel='noopener'
+        >
+          CockroachDB
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
