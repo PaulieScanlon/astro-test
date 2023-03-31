@@ -1,5 +1,8 @@
 ---
+import CockroachLabsLogo from '../components/cockroach-labs-logo.astro';
 const { title } = Astro.props;
+
+import '../styles/tailwind.css';
 ---
 
 <html lang='en'>
@@ -8,14 +11,20 @@ const { title } = Astro.props;
     <meta name='viewport' content='width=device-width, initial-scale=1' />
   </head>
   <body>
-    <nav>
-      <a href={`${import.meta.env.BASE_URL}`}>Home</a>
-      <a href={`${import.meta.env.BASE_URL}about`}>About</a>
-    </nav>
-    <h1>{title}</h1>
-    <article>
+    <header class='fixed bg-white w-full p-4 shadow-lg z-50'>
+      <nav class='mx-auto max-w-7xl flex gap-8 items-center'>
+        <a href='https://www.cockroachlabs.com/' target='_blank' rel='noreferrer'>
+          <CockroachLabsLogo />
+        </a>
+        <span class='flex gap-2'>
+          <a href={`${import.meta.env.BASE_URL}`}>Home</a>
+          <a href={`${import.meta.env.BASE_URL}about`}>About</a>
+        </span>
+      </nav>
+    </header>
+    <main class='prose px-4 p-24 text-brand-white mx-auto max-w-7xl min-h-screen'>
+      <h1>{title}</h1>
       <slot />
-      <!-- your content is injected here -->
-    </article>
+    </main>
   </body>
 </html>
